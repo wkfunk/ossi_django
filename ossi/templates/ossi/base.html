@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "ossi/includes/head_meta.html" %}
+<title>{% block title %}OSSI{% endblock %}</title>
+{% include "ossi/includes/head_js_css.html" %}
+</head>
+
+<body>
+
+{% include "ossi/includes/navbar.html" %}
+
+<div class="container">
+{% block content %}
+{% endblock content %}
+
+  <!-- /END THE FEATURETTES -->
+
+  {% include "ossi/includes/footer.html" %}
+
+</div> <!-- /container -->
+
+{% include "ossi/includes/footer_js.html" %}
+
+</body>
+</html>

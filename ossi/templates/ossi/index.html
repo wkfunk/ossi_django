@@ -1,22 +1,8 @@
----
-title: Open Source Seed Initiative
-layout: post
----
+{% extends "ossi/base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
+{% block title %}OSSI - Index{% endblock %}
 
-<body>
-
-{% include navbar.html %}
-
-<div class="container">
-
+{% block content %}
   <!-- Main component for a primary marketing message or call to action -->
   <div class="jumbotron">
     <p></p>
@@ -189,15 +175,4 @@ layout: post
     </div>
   </div>
 
-
-
-  <!-- /END THE FEATURETTES -->
-
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>
+{% endblock %}
