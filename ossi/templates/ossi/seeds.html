@@ -1,29 +1,7 @@
----
-title: Open Source Seed Initiative: Seeds
-layout: post
----
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-
-<script>
-  function init() {
-    gapi.client.setApiKey('AIzaSyA1ZuuXEKbCNmFHb_Tue3Md0S0EZEz5_iM');
-    gapi.client.load('fusiontables', 'v2').then(makeRequest);
-  }
-</script>
-
-</head>
-
-<body>
-
-{% include navbar.html %}
-
-<div class="container">
+{% extends "ossi/base.html" %}
+{% block title %}OSSI - Index{% endblock %}
+{% block content %}
 
       <!--results-->
       <div id="load"><p class="text-center"><tt>loading...</tt></p></div>
@@ -38,16 +16,5 @@ layout: post
       </div>
 
 
-  <!-- /END THE FEATURETTES -->
 
-  {% include footer.html %}
-
-</div> <!-- /container -->
-<script src="js/ossi.js"></script>
-
-{% include footer_js.html %}
-
- <script src="https://apis.google.com/js/client.js?onload=init"></script>
-
-</body>
-</html>
+{% endblock %}

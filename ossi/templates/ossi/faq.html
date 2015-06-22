@@ -1,23 +1,6 @@
----
-title: Open Source Seed Initiative: FAQs
-layout: post
----
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
-
-<body>
-
-
-{% include navbar.html %}
-
-<div class="container">
-
+{% extends "ossi/base.html" %}
+{% block title %}OSSI - Index{% endblock %}
+{% block content %}
 
   <h1 class="faq-catname">FAQs</h1>
   <div id="qa-faq0" class="qa-faq cf">
@@ -147,13 +130,5 @@ layout: post
     </div><!--.qa-faq-answer-->
   </div><!--.qa-faq-->
 
-  <!-- /END THE FEATURETTES -->
 
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>
+{% endblock %}

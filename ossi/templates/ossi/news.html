@@ -1,21 +1,7 @@
----
-title: Open Source Seed Initiative: News
-layout: post
----
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
-
-<body>
-
-{% include navbar.html %}
-
-<div class="container">
+{% extends "ossi/base.html" %}
+{% block title %}OSSI - Index{% endblock %}
+{% block content %}
 
   <p>The Why Files: <a href="http://osseeds.org/wp-content/uploads/2014/11/whyfiles.org-The_Why_Files.pdf">The Science Behind the News, Seeds of dilemma: Who owns the genes that fill the stomach? </a></p>
   <p>Red Hat: <a href="http://opensource.com/law/14/5/legal-issues-open-source-seed-initiative">The unexpected outcome of the Open Source Seed Initiative’s licensing debate.</a></p>
@@ -24,13 +10,5 @@ layout: post
   <p>Agro-Know: <a href="http://blog.agro-know.com/?p=2001">Open Source Seed Initiative: Sharing Seeds Without Borders</a>.</p>
   <p>Al Jazeera English: <a href="http://www.youtube.com/watch?v=qJsV0mWd8-E">Sowing the Seeds of a New World Order</a></p>
 
-  <!-- /END THE FEATURETTES -->
 
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>
+{% endblock %}

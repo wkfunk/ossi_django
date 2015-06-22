@@ -1,22 +1,7 @@
----
-title: Open Source Seed Initiative: Team
-layout: post
----
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
-
-<body>
-
-{% include navbar.html %}
-
-<div class="container">
-
+{% extends "ossi/base.html" %}
+{% block title %}OSSI - Index{% endblock %}
+{% block content %}
 
 
 
@@ -53,14 +38,6 @@ layout: post
   </div>
 
 
+{% endblock %}
 
-  <!-- /END THE FEATURETTES -->
 
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>

@@ -1,22 +1,8 @@
----
-title: Open Source Seed Initiative: Breeders
-layout: post
----
+{% extends "ossi/base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
+{% block title %}OSSI - Index{% endblock %}
 
-<body>
-
-{% include navbar.html %}
-
-<div class="container float-right">
-
+{% block content %}
 
   <p><strong>Many thanks to our OSSI plant breeders for pledging their varieties to remain freed!</strong></p>
   <p>If you are interested in designating a variety OSSI, see our &#8216;<a href="http://osseeds.org/actions/">Get Involved</a>&#8216; page.</p>
@@ -94,15 +80,4 @@ layout: post
   </div>
 
 
-
-
-  <!-- /END THE FEATURETTES -->
-
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>
+{% endblock %}

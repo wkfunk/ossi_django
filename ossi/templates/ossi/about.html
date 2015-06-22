@@ -1,20 +1,8 @@
----
-title: Open Source Seed Initiative: About
-layout: post
----
+{% extends "ossi/base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
+{% block title %}OSSI - Index{% endblock %}
 
-<body>
-{% include navbar.html %}
-
-<div class="container">
+{% block content %}
 
   <h1>About</h1>
 
@@ -33,14 +21,4 @@ layout: post
   <p>Inspired by the free and open source software movement that has provided alternatives to proprietary software, OSSI was created to free the seed - to make sure that the genes in at least some seed can never be locked away from use by intellectual property rights. Through our Pledge, OSSI asks breeders and stewards of crop varieties to pledge to make their seeds available without restrictions on use, and to ask recipients of those seeds to make the same commitment.</p>
   <p>The OSSI Pledge: You have the freedom to use these OSSI-Pledged seeds in any way you choose. In return, you pledge not to restrict others’ use of these seeds or their derivatives by patents, licenses or other means, and to include this pledge with any transfer of these seeds or their derivatives.</p>
 
-
-  <!-- /END THE FEATURETTES -->
-
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>
+{% endblock %}

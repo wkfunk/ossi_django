@@ -1,21 +1,8 @@
----
-title: Open Source Seed Initiative: Partners
-layout: post
----
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-{% include head_meta.html %}
-<title>{{ page.title }}</title>
-{% include head_js_css.html %}
-</head>
+{% extends "ossi/base.html" %}
+{% block title %}OSSI - Index{% endblock %}
+{% block content %}
 
-<body>
-
-{% include navbar.html %}
-
-<div class="container partners">
 
   <h3>We thank our seed company partners for their support. Visit our seed company partners to purchase OSSI Seed!</h3>
 
@@ -68,14 +55,5 @@ layout: post
 
 
 
-  <!-- /END THE FEATURETTES -->
+{% endblock %}
 
-
-  {% include footer.html %}
-
-</div> <!-- /container -->
-
-{% include footer_js.html %}
-
-</body>
-</html>

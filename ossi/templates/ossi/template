@@ -1,10 +1,7 @@
-
 {% extends "ossi/base.html" %}
 {% block title %}OSSI - Index{% endblock %}
 {% block content %}
 
-
-  <p><em>in progress</em></p>
 
 
 {% endblock %}
