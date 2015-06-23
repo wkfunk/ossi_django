@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^partners', views.partners, name='partners'),
     url(r'^team', views.team, name='team'),
     url(r'^breeders', views.breeders, name='breeders'),
+    url(r'^members', views.members, name='members'),
     ]
 

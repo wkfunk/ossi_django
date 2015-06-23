@@ -22,3 +22,5 @@ def team(request):
     return render(request, 'ossi/team.html')
 def breeders(request):
     return render(request, 'ossi/breeders.html')
+def members(request):
+    return render(request, 'ossi/members.html')
