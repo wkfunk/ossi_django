@@ -4,6 +4,21 @@
 
 {% block content %}
 
+{{ breeders }}
+
+<h1>Breeders</h1>
+
+{% for breeder in breeders %}
+
+  <h2>Name: {{ breeder.name }}</h2>
+  <p>Affiliation: {{ breeder.affiliation }}</p>
+  <p>Biography: {{ breeder.bio }}</p>
+  <p>Image: {{ breeder.image.url }}</p>
+  <img src={{ breeder.image.url }} />
+  <br>
+
+{% endfor %}
+
   <p><strong>Many thanks to our OSSI plant breeders for pledging their varieties to remain freed!</strong></p>
   <p>If you are interested in designating a variety OSSI, see our &#8216;<a href="{% url 'breeders' %}">Breeders</a>&#8216; page.</p>
 

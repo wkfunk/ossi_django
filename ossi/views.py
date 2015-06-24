@@ -1,6 +1,7 @@
 # Create your views here.
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404,get_list_or_404
+from .models import Breeder
 
 def index(request):
     return render(request, 'ossi/index.html')
@@ -21,6 +22,7 @@ def partners(request):
 def team(request):
     return render(request, 'ossi/team.html')
 def breeders(request):
-    return render(request, 'ossi/breeders.html')
+    breeders = get_list_or_404(Breeder)
+    return render(request, 'ossi/breeders.html', {'breeders':breeders})
 def members(request):
     return render(request, 'ossi/members.html')
