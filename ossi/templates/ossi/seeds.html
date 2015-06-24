@@ -3,18 +3,20 @@
 {% block title %}OSSI - Index{% endblock %}
 {% block content %}
 
-      <!--results-->
-      <div id="load"><p class="text-center"><tt>loading...</tt></p></div>
+  <h1>Seeds</h1>
 
-      <div class="row">
-        <div id="table_data" class="col-md-6 col-md-offset-3"></div>
-      </div>
+  {% for variety in varieties %}
 
-      <div class="row">
-        <!--<div id="table_rows" class="isotope col-md-12 "></div>-->
-        <div id="table_rows" class="isotope"></div>
-      </div>
+    <h2>Name: {{ variety.name }}</h2>
+    <p>Crop: {{ variety.crop }}</p>
+    <p>Latin Name: {{ variety.latin_name }}</p>
+    <p>Breeder: {{ variety.breeder }}</p>
+    <img src={{ variety.image.url }} width=100px height=auto />
+    <br>
+
+  {% endfor %}
 
 
 
 {% endblock %}
+

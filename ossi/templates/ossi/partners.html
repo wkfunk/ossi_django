@@ -4,6 +4,16 @@
 {% block content %}
 
 
+  <h1>Partners</h1>
+
+  {% for partner in partners %}
+
+  <a href="{{ partner.default_url }}"><img src={{ partner.image.url }} alt="{{ partner.name }}" /></a>
+    <br>
+
+  {% endfor %}
+
+
   <h3>We thank our seed company partners for their support. Visit our seed company partners to purchase OSSI Seed!</h3>
 
 
