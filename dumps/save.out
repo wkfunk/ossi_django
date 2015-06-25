@@ -49,6 +49,131 @@
 },
 {
   "fields": {
+    "breeder": 3,
+    "image": "./fullpint.jpg",
+    "name": "Full Pint",
+    "crop": "Barley",
+    "latin_name": "Hordeum vulgare"
+  },
+  "model": "ossi.variety",
+  "pk": 1
+},
+{
+  "fields": {
+    "breeder": 1,
+    "image": "./beefy.jpg",
+    "name": "Beefy Resilient Grex, Bush Dry Bean",
+    "crop": "Bean",
+    "latin_name": "Phaseolus vulgaris"
+  },
+  "model": "ossi.variety",
+  "pk": 2
+},
+{
+  "fields": {
+    "breeder": 3,
+    "image": "./white_candle.jpg",
+    "name": "White Candle Gaucho",
+    "crop": "Bean",
+    "latin_name": "Phaseolus vulgaris"
+  },
+  "model": "ossi.variety",
+  "pk": 3
+},
+{
+  "fields": {
+    "breeder": 4,
+    "image": "./hannan.jpg",
+    "name": "Hannan Popbean",
+    "crop": "Bean",
+    "latin_name": "Cicer arietinum"
+  },
+  "model": "ossi.variety",
+  "pk": 4
+},
+{
+  "fields": {
+    "image": "./wild_garden_PxiqJ8S.jpg",
+    "name": "Wild Garden Seed",
+    "default_url": "https://www.wildgardenseed.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 1
+},
+{
+  "fields": {
+    "image": "./high_mowing_jKDWmU4.jpg",
+    "name": "High Mowing Organic Seeds",
+    "default_url": "http://www.highmowingseeds.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 2
+},
+{
+  "fields": {
+    "image": "./lupine_knoll_eod7BgL.jpg",
+    "name": "Lupine Knoll",
+    "default_url": "http://www.lupineknollfarm.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 3
+},
+{
+  "fields": {
+    "image": "./coop_seed_Ienf9xr.png",
+    "name": "Coop Seed",
+    "default_url": "http://www.organicseedcoop.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 4
+},
+{
+  "fields": {
+    "image": "./nichols_Kg7ozNg.png",
+    "name": "Nichols Garden Nursery",
+    "default_url": "https://www.nicholsgardennursery.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 5
+},
+{
+  "fields": {
+    "image": "./cultivariable_qoZeGC0.png",
+    "name": "Cultivariable",
+    "default_url": "https://www.cultivariable.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 6
+},
+{
+  "fields": {
+    "image": "./bountiful_garden_ZCwOu50.png",
+    "name": "Bountiful Gardens",
+    "default_url": "http://www.bountifulgardens.org/"
+  },
+  "model": "ossi.seller",
+  "pk": 7
+},
+{
+  "fields": {
+    "image": "./restoration_mgGpvyR.png",
+    "name": "Restoration Seeds",
+    "default_url": "http://www.restorationseeds.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 8
+},
+{
+  "fields": {
+    "image": "./fruition_PTxlRKA.png",
+    "name": "Fruition Seeds",
+    "default_url": "http://www.fruitionseeds.com/default.asp"
+  },
+  "model": "ossi.seller",
+  "pk": 9
+},
+{
+  "fields": {
     "city": "fertile valley",
     "content_type": 131,
     "country": "USA",
