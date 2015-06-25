@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Member,Breeder,Variety,VarietySubmission,Seller,SeedSold,Phone,Address
+from .models import Member,Breeder,Variety,VarietySubmission,Seller,SeedSold,Phone,Address,FAQ
 from django.contrib.contenttypes import generic
 
 
@@ -27,3 +27,4 @@ admin.site.register(Seller)
 admin.site.register(SeedSold)
 admin.site.register(Phone)
 admin.site.register(Address)
+admin.site.register(FAQ)

@@ -1,0 +1,1105 @@
+[
+{
+  "fields": {
+    "model": "permission",
+    "app_label": "auth"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 1
+},
+{
+  "fields": {
+    "model": "group",
+    "app_label": "auth"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 2
+},
+{
+  "fields": {
+    "model": "user",
+    "app_label": "auth"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 3
+},
+{
+  "fields": {
+    "model": "contenttype",
+    "app_label": "contenttypes"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 4
+},
+{
+  "fields": {
+    "model": "session",
+    "app_label": "sessions"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 5
+},
+{
+  "fields": {
+    "model": "site",
+    "app_label": "sites"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 6
+},
+{
+  "fields": {
+    "model": "logentry",
+    "app_label": "admin"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 7
+},
+{
+  "fields": {
+    "model": "member",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 8
+},
+{
+  "fields": {
+    "model": "breeder",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 9
+},
+{
+  "fields": {
+    "model": "variety",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 10
+},
+{
+  "fields": {
+    "model": "varietysubmission",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 11
+},
+{
+  "fields": {
+    "model": "seller",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 12
+},
+{
+  "fields": {
+    "model": "seedsold",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 13
+},
+{
+  "fields": {
+    "model": "address",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 14
+},
+{
+  "fields": {
+    "model": "phone",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 15
+},
+{
+  "fields": {
+    "model": "faq",
+    "app_label": "ossi"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 16
+},
+{
+  "fields": {
+    "expire_date": "2015-07-09T19:10:47.938Z",
+    "session_data": "Yzk1MjVlOGMyMDhkNDhmOTU0NTFhMmYzNjhhZWRlMmM4YTcyNDQ2MDp7Il9hdXRoX3VzZXJfaGFzaCI6IjFlZjYxYzkzNzY3MmE5ZTYxMDJlZGZjMTBlMWQ1MTU1ODc0OWQ2NDgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+  },
+  "model": "sessions.session",
+  "pk": "fj0akvatl3li6ncw64epwzleczz6vwq8"
+},
+{
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  },
+  "model": "sites.site",
+  "pk": 1
+},
+{
+  "fields": {
+    "bio": "Oregon plant breeder Carol Deppe holds a PhD in biology from Harvard University and specializes in developing public-domain crops for organic growing conditions, sustainable agriculture, and human survival for the next thousand years. She is author of Breed Your Own Vegetable Varieties: The Gardener\u2019s and Farmer\u2019s Guide to Plant Breeding and Seed Saving (2 nd ed.) (Chelsea Green, 2000), The Resilient Gardener: Food Production and Self-Reliance in Uncertain Times (Including the Five Crops You Need To Survive and Thrive\u2014Potatoes, Corn, Beans, Squash, and Eggs) (Chelsea Green, 2010), and The Tao of Vegetable Gardening: Cultivating Tomatoes, Greens, Peas, Beans, Squash, Joy, and Serenity (Chelsea Green, Jan. 2015). Carol is founder and owner of Fertile Valley Seeds, which distributes the varieties she has bred along with selected others. For seed variety descriptions and ordering information see the Fertile Valley Seeds seed list at www.caroldeppe.com . Varieties Carol has bred and released include: Flint Corns: \u2018Cascade Ruby-Gold\u2019 and \u2018Cascade Creamcap\u2019; Flour Corns: \u2018Magic Manna\u2019, \u2018Pancake White Manna\u2019, and \u2018Brown Gravy Manna\u2019; Winter Squash: \u2018Sweet Meat\u2014Oregon Homestead\u2019 and \u2018Candystick Dessert Delicata\u2019; and Dry Beans: \u2018White Candle Gaucho\u2019, \u2018Beefy Resilient Grex\u2019, \u2018Hannan Popbean\u2019 (garbanzo), and \u2018Fast Lady Northern Southern Pea\u2019 (cowpea). \u2018Cascade Ruby-Gold\u2019 and \u2018Cascade Creamcap\u2019 flint corns have extended the range northward for corn as a practical homestead crop and produce reliable on Vancouver Island, British Columbia, in Ireland, and in Sweden. For photos of some of these varieties see https://www.flickr.com/photos/caroldeppe/sets/ .",
+    "name": "Carol Deppe",
+    "image": "./CarolwithSquash_muI5UzH.jpg",
+    "affiliation": "Fertile Valley Seeds",
+    "default_url": "http://www.caroldeppe.com",
+    "email": "carol@carol.com"
+  },
+  "model": "ossi.breeder",
+  "pk": 1
+},
+{
+  "fields": {
+    "bio": "Irwin Goldman is a professor in the Department of Horticulture at the University of Wisconsin-Madison. His research focuses on vegetable breeding and genetics (carrot, onion, and table beet) with an emphasis on plant secondary metabolites that have some potential value for human health and wellbeing. He has also bred numerous cultivars and inbred lines that have been used to make commercial hybrids. These are grown by farmers throughout the world. A portion of the germplasm from his program is licensed through WARF and returns royalties to the breeding program. His program currently has over 75 active germplasm licenses. Irwin teaches five courses at UW-Madison, including world vegetable crops, principles of plant breeding, techniques of plant breeding, evolutionary biology, and plants and human well being. He is currently serving as department chair and works with both graduate and undergraduate students in a variety of research and outreach projects.",
+    "name": "Irwin Goldman",
+    "image": "./irwin_qre45CN.jpg",
+    "affiliation": "UW-Madison",
+    "default_url": "http://goldman.horticulture.wisc.edu/",
+    "email": "irwin@uw.edu"
+  },
+  "model": "ossi.breeder",
+  "pk": 2
+},
+{
+  "fields": {
+    "bio": "Dr. Patrick Hayes is a Professor at Oregon State University. His research focuses on barley \u2013 in its many forms and uses. His current research interests include: development of winter habit barley varieties for malting and human nutrition; the many facets of winter hardiness; dissection of quantitative disease resistance; characterization and utilization of genetic diversity; stimulating local barley production; and barley quality assessment. He has generated a fair bit of \u201cstuff\u201d over the years: he has released nine varieties, distributed approximately 11 MT of germplasm, published 132 papers in refereed journals, and authored 12 book chapters. Each year he teaches Introductory Plant Genetics to approximately 50 students. Most of them start the class with fear and loathing but most graduate with a keen appreciation for the complexity and power of genetics. He has served as Major Professor for 28 graduate students and five undergraduate thesis students.",
+    "name": "Pat Hayes",
+    "image": "./pat_9cH60PT.jpg",
+    "affiliation": "Oregon State University",
+    "default_url": "",
+    "email": "pat@osu.edu"
+  },
+  "model": "ossi.breeder",
+  "pk": 3
+},
+{
+  "fields": {
+    "bio": "Tom Stearns began gardening at an early age at his family home in CT. Prior to completing a degree in Sustainable Agriculture from Prescott College in AZ, he began saving seeds. A hobby was born in 1996 in Vermont, when Tom began sharing these seeds with others through a small seed flyer. High Mowing Organic Seeds has since expanded into one of the leading organic seed companies in the U.S., supplying both home gardeners, commercial growers and retailers. Tom's vision has always been to create a company that would help support the re-building of healthy food systems, first in Vermont, followed by the rest of the U.S. He has also taught numerous workshops since 1996 on many topics such as ag. education, economics, community supported agriculture, genetic engineering, plant breeding, local food systems, sustainable business, investing and more. His informal, personal style, ability to explain complex issues and infectious enthusiasm makes him a popular and inspiring speaker. In addition, he has served on the board of several agricultural organizations including NOFA-VT, The Center for an Agricultural Economy and Sterling College. He lives on 50 acres in Vermont, with his wife Heather, and their two girls, Ruby and Cora.",
+    "name": "Tom Stearns",
+    "image": "./tom_UskIrue.jpg",
+    "affiliation": "High Mowing Organic Seed Company",
+    "default_url": "",
+    "email": "tom@highmowing.com"
+  },
+  "model": "ossi.breeder",
+  "pk": 4
+},
+{
+  "fields": {
+    "breeder": 1,
+    "image": "./fullpint_60ow2QZ.jpg",
+    "name": "Full Pint",
+    "crop": "Barley",
+    "latin_name": "Hordeum vulgare"
+  },
+  "model": "ossi.variety",
+  "pk": 1
+},
+{
+  "fields": {
+    "breeder": 1,
+    "image": "./beefy_k9Wcbrv.jpg",
+    "name": "Beefy Resilient Grex, Bush Dry Bean",
+    "crop": "Bean",
+    "latin_name": "Phaseolus vulgaris"
+  },
+  "model": "ossi.variety",
+  "pk": 2
+},
+{
+  "fields": {
+    "breeder": 1,
+    "image": "./white_candle_NKWwQBt.jpg",
+    "name": "White Candle Gaucho",
+    "crop": "Bean",
+    "latin_name": "Phaseolus vulgaris"
+  },
+  "model": "ossi.variety",
+  "pk": 3
+},
+{
+  "fields": {
+    "breeder": 1,
+    "image": "./hannan_5yergwK.jpg",
+    "name": "Hannan Popbean",
+    "crop": "Bean",
+    "latin_name": "Cicer arietinum"
+  },
+  "model": "ossi.variety",
+  "pk": 4
+},
+{
+  "fields": {
+    "image": "./wild_garden_dj78Q3u.jpg",
+    "name": "Wild Garden Seed",
+    "default_url": "https://www.wildgardenseed.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 1
+},
+{
+  "fields": {
+    "image": "./high_mowing_xLypYsw.jpg",
+    "name": "High Mowing Organic Seeds",
+    "default_url": "http://www.highmowingseeds.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 2
+},
+{
+  "fields": {
+    "image": "./lupine_knoll_CZEMIdS.jpg",
+    "name": "Lupine Knoll",
+    "default_url": "http://www.lupineknollfarm.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 3
+},
+{
+  "fields": {
+    "image": "./coop_seed_WahWbLg.png",
+    "name": "Coop Seed",
+    "default_url": "http://www.organicseedcoop.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 4
+},
+{
+  "fields": {
+    "image": "./nichols_gjjQLhu.png",
+    "name": "Nichols Garden Nursery",
+    "default_url": "https://www.nicholsgardennursery.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 5
+},
+{
+  "fields": {
+    "image": "./cultivariable_oInVPFI.png",
+    "name": "Cultivariable",
+    "default_url": "https://www.cultivariable.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 6
+},
+{
+  "fields": {
+    "image": "./bountiful_garden_4pmfJ2B.png",
+    "name": "Bountiful Gardens",
+    "default_url": "http://www.bountifulgardens.org/"
+  },
+  "model": "ossi.seller",
+  "pk": 7
+},
+{
+  "fields": {
+    "image": "./restoration_goEQFDZ.png",
+    "name": "Restoration Seeds",
+    "default_url": "http://www.restorationseeds.com/"
+  },
+  "model": "ossi.seller",
+  "pk": 8
+},
+{
+  "fields": {
+    "image": "./fruition_l76VoSB.png",
+    "name": "Fruition Seeds",
+    "default_url": "http://www.fruitionseeds.com/default.asp"
+  },
+  "model": "ossi.seller",
+  "pk": 9
+},
+{
+  "fields": {
+    "answer": "The OSSI Pledge reads: \"You have the freedom to use these OSSI-Pledged seeds in any way you choose. In return, you pledge not to restrict others' use of these seeds or their derivatives by patents, licenses or other means, and to include this pledge with any transfer of these seeds or their derivatives.\"",
+    "question": "What is the OSSI Pledge?"
+  },
+  "model": "ossi.faq",
+  "pk": 1
+},
+{
+  "fields": {
+    "answer": "OSSI was created to counterbalance the trend towards patenting and restricting the use of seeds and the rights of farmers and gardeners who buy them. Over the past 30 years, patents and licenses and other restrictions on the uses of seed have spread to many parts of the world. If this trend continues, these critically important genetic resources may become so legally encumbered that farmers and gardeners may be unable to do anything more than rent seeds from the companies who control them. Today, the purchase of many varieties of corn, soybean, sugarbeet, and cotton seeds in the U.S. by a farmer constitutes a one-time rental of the seed for a single cropping season. \"Bag tag\" licenses prevent farmers from saving, replanting, breeding, and sharing seed that has been rented, no longer purchased. In addition, plant breeders are prohibited from using these seeds to improve our crops and protect them from pests and diseases. These legal restrictions on seeds benefit a few companies but jeopardize the freedom of others to use this critically important natural resource.",
+    "question": "Why was OSSI created?"
+  },
+  "model": "ossi.faq",
+  "pk": 3
+},
+{
+  "fields": {
+    "answer": "OSSI stands for the Open Source Seed Initiative. OSSI has three interconnected objectives. First, OSSI is a new way to save and exchange seed that ensures the seed will remain free of patents, licenses, and other restrictions on freedom to use. This method of exchange involves commitment to an open source seed Pledge. Second, OSSI maintains a list of crop varieties that have been pledged as \"freed seed\" and provides a link to sources of seed for those varieties. Third, OSSI works to raise awareness of the importance of keeping seeds unencumbered from legal restrictions and free to be used, shared, saved, bred, and sold.",
+    "question": "What is OSSI?"
+  },
+  "model": "ossi.faq",
+  "pk": 4
+},
+{
+  "fields": {
+    "codename": "add_permission",
+    "name": "Can add permission",
+    "content_type": 1
+  },
+  "model": "auth.permission",
+  "pk": 1
+},
+{
+  "fields": {
+    "codename": "change_permission",
+    "name": "Can change permission",
+    "content_type": 1
+  },
+  "model": "auth.permission",
+  "pk": 2
+},
+{
+  "fields": {
+    "codename": "delete_permission",
+    "name": "Can delete permission",
+    "content_type": 1
+  },
+  "model": "auth.permission",
+  "pk": 3
+},
+{
+  "fields": {
+    "codename": "add_group",
+    "name": "Can add group",
+    "content_type": 2
+  },
+  "model": "auth.permission",
+  "pk": 4
+},
+{
+  "fields": {
+    "codename": "change_group",
+    "name": "Can change group",
+    "content_type": 2
+  },
+  "model": "auth.permission",
+  "pk": 5
+},
+{
+  "fields": {
+    "codename": "delete_group",
+    "name": "Can delete group",
+    "content_type": 2
+  },
+  "model": "auth.permission",
+  "pk": 6
+},
+{
+  "fields": {
+    "codename": "add_user",
+    "name": "Can add user",
+    "content_type": 3
+  },
+  "model": "auth.permission",
+  "pk": 7
+},
+{
+  "fields": {
+    "codename": "change_user",
+    "name": "Can change user",
+    "content_type": 3
+  },
+  "model": "auth.permission",
+  "pk": 8
+},
+{
+  "fields": {
+    "codename": "delete_user",
+    "name": "Can delete user",
+    "content_type": 3
+  },
+  "model": "auth.permission",
+  "pk": 9
+},
+{
+  "fields": {
+    "codename": "add_contenttype",
+    "name": "Can add content type",
+    "content_type": 4
+  },
+  "model": "auth.permission",
+  "pk": 10
+},
+{
+  "fields": {
+    "codename": "change_contenttype",
+    "name": "Can change content type",
+    "content_type": 4
+  },
+  "model": "auth.permission",
+  "pk": 11
+},
+{
+  "fields": {
+    "codename": "delete_contenttype",
+    "name": "Can delete content type",
+    "content_type": 4
+  },
+  "model": "auth.permission",
+  "pk": 12
+},
+{
+  "fields": {
+    "codename": "add_session",
+    "name": "Can add session",
+    "content_type": 5
+  },
+  "model": "auth.permission",
+  "pk": 13
+},
+{
+  "fields": {
+    "codename": "change_session",
+    "name": "Can change session",
+    "content_type": 5
+  },
+  "model": "auth.permission",
+  "pk": 14
+},
+{
+  "fields": {
+    "codename": "delete_session",
+    "name": "Can delete session",
+    "content_type": 5
+  },
+  "model": "auth.permission",
+  "pk": 15
+},
+{
+  "fields": {
+    "codename": "add_site",
+    "name": "Can add site",
+    "content_type": 6
+  },
+  "model": "auth.permission",
+  "pk": 16
+},
+{
+  "fields": {
+    "codename": "change_site",
+    "name": "Can change site",
+    "content_type": 6
+  },
+  "model": "auth.permission",
+  "pk": 17
+},
+{
+  "fields": {
+    "codename": "delete_site",
+    "name": "Can delete site",
+    "content_type": 6
+  },
+  "model": "auth.permission",
+  "pk": 18
+},
+{
+  "fields": {
+    "codename": "add_logentry",
+    "name": "Can add log entry",
+    "content_type": 7
+  },
+  "model": "auth.permission",
+  "pk": 19
+},
+{
+  "fields": {
+    "codename": "change_logentry",
+    "name": "Can change log entry",
+    "content_type": 7
+  },
+  "model": "auth.permission",
+  "pk": 20
+},
+{
+  "fields": {
+    "codename": "delete_logentry",
+    "name": "Can delete log entry",
+    "content_type": 7
+  },
+  "model": "auth.permission",
+  "pk": 21
+},
+{
+  "fields": {
+    "codename": "add_member",
+    "name": "Can add member",
+    "content_type": 8
+  },
+  "model": "auth.permission",
+  "pk": 22
+},
+{
+  "fields": {
+    "codename": "change_member",
+    "name": "Can change member",
+    "content_type": 8
+  },
+  "model": "auth.permission",
+  "pk": 23
+},
+{
+  "fields": {
+    "codename": "delete_member",
+    "name": "Can delete member",
+    "content_type": 8
+  },
+  "model": "auth.permission",
+  "pk": 24
+},
+{
+  "fields": {
+    "codename": "add_breeder",
+    "name": "Can add breeder",
+    "content_type": 9
+  },
+  "model": "auth.permission",
+  "pk": 25
+},
+{
+  "fields": {
+    "codename": "change_breeder",
+    "name": "Can change breeder",
+    "content_type": 9
+  },
+  "model": "auth.permission",
+  "pk": 26
+},
+{
+  "fields": {
+    "codename": "delete_breeder",
+    "name": "Can delete breeder",
+    "content_type": 9
+  },
+  "model": "auth.permission",
+  "pk": 27
+},
+{
+  "fields": {
+    "codename": "add_variety",
+    "name": "Can add variety",
+    "content_type": 10
+  },
+  "model": "auth.permission",
+  "pk": 28
+},
+{
+  "fields": {
+    "codename": "change_variety",
+    "name": "Can change variety",
+    "content_type": 10
+  },
+  "model": "auth.permission",
+  "pk": 29
+},
+{
+  "fields": {
+    "codename": "delete_variety",
+    "name": "Can delete variety",
+    "content_type": 10
+  },
+  "model": "auth.permission",
+  "pk": 30
+},
+{
+  "fields": {
+    "codename": "add_varietysubmission",
+    "name": "Can add variety submission",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 31
+},
+{
+  "fields": {
+    "codename": "change_varietysubmission",
+    "name": "Can change variety submission",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 32
+},
+{
+  "fields": {
+    "codename": "delete_varietysubmission",
+    "name": "Can delete variety submission",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 33
+},
+{
+  "fields": {
+    "codename": "add_seller",
+    "name": "Can add seller",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 34
+},
+{
+  "fields": {
+    "codename": "change_seller",
+    "name": "Can change seller",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 35
+},
+{
+  "fields": {
+    "codename": "delete_seller",
+    "name": "Can delete seller",
+    "content_type": 12
+  },
+  "model": "auth.permission",
+  "pk": 36
+},
+{
+  "fields": {
+    "codename": "add_seedsold",
+    "name": "Can add seed sold",
+    "content_type": 13
+  },
+  "model": "auth.permission",
+  "pk": 37
+},
+{
+  "fields": {
+    "codename": "change_seedsold",
+    "name": "Can change seed sold",
+    "content_type": 13
+  },
+  "model": "auth.permission",
+  "pk": 38
+},
+{
+  "fields": {
+    "codename": "delete_seedsold",
+    "name": "Can delete seed sold",
+    "content_type": 13
+  },
+  "model": "auth.permission",
+  "pk": 39
+},
+{
+  "fields": {
+    "codename": "add_address",
+    "name": "Can add address",
+    "content_type": 14
+  },
+  "model": "auth.permission",
+  "pk": 40
+},
+{
+  "fields": {
+    "codename": "change_address",
+    "name": "Can change address",
+    "content_type": 14
+  },
+  "model": "auth.permission",
+  "pk": 41
+},
+{
+  "fields": {
+    "codename": "delete_address",
+    "name": "Can delete address",
+    "content_type": 14
+  },
+  "model": "auth.permission",
+  "pk": 42
+},
+{
+  "fields": {
+    "codename": "add_phone",
+    "name": "Can add phone",
+    "content_type": 15
+  },
+  "model": "auth.permission",
+  "pk": 43
+},
+{
+  "fields": {
+    "codename": "change_phone",
+    "name": "Can change phone",
+    "content_type": 15
+  },
+  "model": "auth.permission",
+  "pk": 44
+},
+{
+  "fields": {
+    "codename": "delete_phone",
+    "name": "Can delete phone",
+    "content_type": 15
+  },
+  "model": "auth.permission",
+  "pk": 45
+},
+{
+  "fields": {
+    "codename": "add_faq",
+    "name": "Can add faq",
+    "content_type": 16
+  },
+  "model": "auth.permission",
+  "pk": 46
+},
+{
+  "fields": {
+    "codename": "change_faq",
+    "name": "Can change faq",
+    "content_type": 16
+  },
+  "model": "auth.permission",
+  "pk": 47
+},
+{
+  "fields": {
+    "codename": "delete_faq",
+    "name": "Can delete faq",
+    "content_type": 16
+  },
+  "model": "auth.permission",
+  "pk": 48
+},
+{
+  "fields": {
+    "username": "keith",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": true,
+    "is_staff": true,
+    "last_login": "2015-06-25T19:10:47.932Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$20000$JcBPbEIJw8gG$vSma2PE6dYmAt8Bte2vMffVJ+uJ9ApeJKpxhOa6Agyc=",
+    "email": "keith@keith.com",
+    "date_joined": "2015-06-25T19:10:35.313Z"
+  },
+  "model": "auth.user",
+  "pk": 1
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:10:59.037Z",
+    "object_repr": "hello",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 1
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:11:02.505Z",
+    "object_repr": "goodnight",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 2
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:14:20.814Z",
+    "object_repr": "Pat Hayes (Fertile Valley Seeds)",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 3
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:15:01.038Z",
+    "object_repr": "Irwin Goldman (UW-Madison)",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 4
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:15:17.666Z",
+    "object_repr": "Pat Hayes (Oregon State University)",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 5
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:16:02.769Z",
+    "object_repr": "Tom Stearns (High Mowing Organic Seed Company)",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 6
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-06-25T19:21:56.987Z",
+    "object_repr": "What is the OSSI Pledge?",
+    "object_id": "1",
+    "change_message": "Changed question and answer.",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 7
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:22:08.208Z",
+    "object_repr": "Why was OSSI created?",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 8
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:22:15.549Z",
+    "object_repr": "What is OSSI?",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 9
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-06-25T19:22:21.733Z",
+    "object_repr": "goodnight",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 16
+  },
+  "model": "admin.logentry",
+  "pk": 10
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:23:21.314Z",
+    "object_repr": "Full Pint",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 11
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-06-25T19:24:02.214Z",
+    "object_repr": "Carol Deppe (Fertile Valley Seeds)",
+    "object_id": "1",
+    "change_message": "Changed name.",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 12
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:24:05.997Z",
+    "object_repr": "Beefy Resilient Grex, Bush Dry Bean",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 13
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:24:22.141Z",
+    "object_repr": "White Candle Gaucho",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 14
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:24:39.834Z",
+    "object_repr": "Hannan Popbean",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 15
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:25:21.518Z",
+    "object_repr": "Wild Garden Seed",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 16
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:25:28.644Z",
+    "object_repr": "High Mowing Organic Seeds",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 17
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:25:47.330Z",
+    "object_repr": "Lupine Knoll",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 18
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:25:57.555Z",
+    "object_repr": "Coop Seed",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 19
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:26:07.219Z",
+    "object_repr": "Nichols Garden Nursery",
+    "object_id": "5",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 20
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:26:18.685Z",
+    "object_repr": "Cultivariable",
+    "object_id": "6",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 21
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:26:27.570Z",
+    "object_repr": "Bountiful Gardens",
+    "object_id": "7",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 22
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:26:38.217Z",
+    "object_repr": "Restoration Seeds",
+    "object_id": "8",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 23
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-06-25T19:26:44.907Z",
+    "object_repr": "Fruition Seeds",
+    "object_id": "9",
+    "change_message": "",
+    "user": 1,
+    "content_type": 12
+  },
+  "model": "admin.logentry",
+  "pk": 24
+}
+]
