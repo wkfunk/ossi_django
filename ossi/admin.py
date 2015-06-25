@@ -1,21 +1,21 @@
 from django.contrib import admin
-from .models import Member,Breeder,Variety,VarietySubmission,Seller,SeedSold,Phone,Address,BreederPhone,BreederAddress
+from .models import Member,Breeder,Variety,VarietySubmission,Seller,SeedSold,Phone,Address
+from django.contrib.contenttypes import generic
 
 
 #inlines
-class BreederAddressInLine(admin.StackedInline):
-    model = BreederAddress
-    extra = 1
-
-class BreederPhoneInline(admin.StackedInline):
-    model = BreederPhone
-    extra = 1
+class AddressInLine(generic.GenericStackedInline):
+    model = Address
+    max_num = 1
+class PhoneInLine(generic.GenericStackedInline):
+    model = Phone
+    max_num = 1
 
 #admins
 class BreederAdmin(admin.ModelAdmin):
+    model = Breeder
     inlines = [
-            BreederAddressInLine,
-            BreederPhoneInline,
+            AddressInLine,
             ]
 
     

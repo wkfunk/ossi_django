@@ -16,15 +16,18 @@ def news(request):
 def resources(request):
     return render(request, 'ossi/resources.html')
 def seeds(request):
-    varieties = get_list_or_404(Variety)
+    #varieties = get_list_or_404(Variety)
+    varieties = Variety.objects.all()
     return render(request, 'ossi/seeds.html', {'varieties':varieties})
 def partners(request):
-    partners = get_list_or_404(Seller)
+    #partners = get_list_or_404(Seller)
+    partners = Seller.objects.all()
     return render(request, 'ossi/partners.html', {'partners':partners})
 def team(request):
     return render(request, 'ossi/team.html')
 def breeders(request):
-    breeders = get_list_or_404(Breeder)
+    #breeders = get_list_or_404(Breeder)
+    breeders = Breeder.objects.all()
     return render(request, 'ossi/breeders.html', {'breeders':breeders})
 def members(request):
     return render(request, 'ossi/members.html')

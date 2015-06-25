@@ -5,16 +5,20 @@
 
   <h1>Seeds</h1>
 
-  {% for variety in varieties %}
+  {% if varieties %}
+    {% for variety in varieties %}
 
-    <h2>Name: {{ variety.name }}</h2>
-    <p>Crop: {{ variety.crop }}</p>
-    <p>Latin Name: {{ variety.latin_name }}</p>
-    <p>Breeder: {{ variety.breeder }}</p>
-    <img src={{ variety.image.url }} width=100px height=auto />
-    <br>
+      <h2>Name: {{ variety.name }}</h2>
+      <p>Crop: {{ variety.crop }}</p>
+      <p>Latin Name: {{ variety.latin_name }}</p>
+      <p>Breeder: {{ variety.breeder }}</p>
+      <img src={{ variety.image.url }} width=100px height=auto />
+      <br>
 
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    <p>An error has occurred. Varieties are not available right now.</p>
+  {% endif %}
 
 
 

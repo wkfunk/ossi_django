@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes import generic
 
 class Member(models.Model):
     first_name = models.CharField(max_length=50)
@@ -12,6 +14,7 @@ class Breeder(models.Model):
     name = models.CharField(max_length=50)
     affiliation = models.CharField(max_length=50)
     #address = models.OneToOneField(Address)
+    default_url = models.URLField(blank=True)
     email = models.EmailField()
     #phone = models.CharField(max_length=50)
     bio = models.TextField()
@@ -93,24 +96,26 @@ class Address(models.Model):
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=10)
     country = models.CharField(max_length=100)
+
+    #reverse inline stuff
+    # http://stackoverflow.com/questions/8597960/reverse-inlines-in-django-admin-with-more-than-one-model
+    object_id = models.PositiveIntegerField()
+    content_type = models.ForeignKey(ContentType)
+    of = generic.GenericForeignKey('content_type', 'object_id')
+
     def __str__(self):
         return ', '.join([self.address_1, self.city, self.state])
-class MemberAddress(Address):
-    member = models.ForeignKey(Member)
-class BreederAddress(Address):
-    breeder = models.ForeignKey(Breeder)
-class VarietySubmissionAddress(Address):
-    variety_submission = models.ForeignKey(VarietySubmission)
 
 
 #PHONES
 class Phone(models.Model):
     number = models.CharField(max_length=50)
 
+    #reverse inline stuff
+    # http://stackoverflow.com/questions/8597960/reverse-inlines-in-django-admin-with-more-than-one-model
+    object_id = models.PositiveIntegerField()
+    content_type = models.ForeignKey(ContentType)
+    of = generic.GenericForeignKey('content_type', 'object_id')
+
     def __str__(self):
         return self.number
-class BreederPhone(Phone):
-    breeder = models.ForeignKey(Breeder)
-class VarietySubmissionPhone(Phone):
-    variety_submission = models.ForeignKey(VarietySubmission)
-

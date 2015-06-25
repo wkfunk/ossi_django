@@ -6,12 +6,16 @@
 
   <h1>Partners</h1>
 
-  {% for partner in partners %}
+  {% if partners %}
+    {% for partner in partners %}
 
-  <a href="{{ partner.default_url }}"><img src={{ partner.image.url }} alt="{{ partner.name }}" /></a>
-    <br>
+    <a href="{{ partner.default_url }}"><img src={{ partner.image.url }} alt="{{ partner.name }}" /></a>
+      <br>
 
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    <p>An error has occurred. Partners are not available right now.<p>
+  {% endif %}
 
 
   <h3>We thank our seed company partners for their support. Visit our seed company partners to purchase OSSI Seed!</h3>
