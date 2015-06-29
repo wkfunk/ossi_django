@@ -10,6 +10,9 @@ class AddressInLine(generic.GenericStackedInline):
 class PhoneInLine(generic.GenericStackedInline):
     model = Phone
     max_num = 1
+class SeedSoldInline(admin.TabularInline):
+    model = SeedSold
+    extra = 1
 
 #admins
 class BreederAdmin(admin.ModelAdmin):
@@ -18,16 +21,18 @@ class BreederAdmin(admin.ModelAdmin):
             AddressInLine,
             ]
 
-class SeedSoldAdmin(admin.ModelAdmin):
-    model = SeedSold
+class VarietyAdmin(admin.ModelAdmin):
+    model = Variety
+    inlines = [
+            SeedSoldInline,
+            ]
 
-    
 admin.site.register(Member)
 admin.site.register(Breeder,BreederAdmin)
-admin.site.register(Variety)
+admin.site.register(Variety, VarietyAdmin)
 admin.site.register(VarietySubmission)
 admin.site.register(Seller)
-admin.site.register(SeedSold,SeedSoldAdmin)
+admin.site.register(SeedSold)
 admin.site.register(Phone)
 admin.site.register(Address)
 admin.site.register(FAQ)

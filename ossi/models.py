@@ -84,11 +84,11 @@ class Seller(models.Model):
         return self.name
 
 class SeedSold(models.Model):
+    variety = models.ForeignKey('Variety',blank=True,null=True)
     seller = models.ForeignKey('Seller')
-    variety = models.ForeignKey('Variety')
     url = models.URLField()
     def __str__(self):
-        return self.variety + " (" + self.seller + ")"
+        return str(self.seller) + " (" + self.url + ")"
 
 
 #ADDRESSES
