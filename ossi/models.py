@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
+import django_filters
 
 class Member(models.Model):
     first_name = models.CharField(max_length=50)
@@ -126,3 +127,20 @@ class FAQ(models.Model):
 
     def __str__(self):
         return self.question
+
+class VarietyFilter(django_filters.FilterSet):
+    #unique breeders
+    #breeders = [variety.breeder.name for variety in Variety.objects.all()]
+    #BREEDERS = zip(breeders,breeders)
+    #BREEDERS = zip(range(1,len(breeders)), breeders)
+    #breeder = django_filters.MultipleChoiceFilter(choices = BREEDERS)
+    class Meta:
+        model = Variety
+        fields = ['name', 'crop', 'latin_name', 'breeder']
+        fields = {
+                'name': ['icontains'],
+                'crop': ['icontains'],
+                'latin_name': ['icontains'],
+                'breeder': ['exact'],
+                }
+        

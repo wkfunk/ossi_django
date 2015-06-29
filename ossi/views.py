@@ -1,7 +1,7 @@
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import render,get_object_or_404,get_list_or_404
-from .models import Breeder,Variety,Seller,FAQ
+from .models import Breeder,Variety,Seller,FAQ,VarietyFilter
 
 def index(request):
     return render(request, 'ossi/index.html')
@@ -18,7 +18,9 @@ def resources(request):
     return render(request, 'ossi/resources.html')
 def seeds(request):
     #varieties = get_list_or_404(Variety)
-    varieties = Variety.objects.all()
+    varieties = VarietyFilter(request.GET, queryset=Variety.objects.all())
+    for variety in varieties:
+        print variety
     return render(request, 'ossi/seeds.html', {'varieties':varieties})
 def partners(request):
     #partners = get_list_or_404(Seller)

@@ -5,6 +5,11 @@
 
   <h1>Seeds</h1>
 
+  <form action="" method="get">
+    {{ varieties.form.as_p }}
+    <input type="submit" />
+  </form>
+
   {% if varieties %}
     {% for variety in varieties %}
 
