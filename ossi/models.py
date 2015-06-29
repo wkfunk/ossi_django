@@ -84,7 +84,7 @@ class Seller(models.Model):
         return self.name
 
 class SeedSold(models.Model):
-    variety = models.ForeignKey('Variety',blank=True,null=True)
+    variety = models.ForeignKey('Variety',blank=True,null=True,related_name='locations')
     seller = models.ForeignKey('Seller')
     url = models.URLField()
     def __str__(self):

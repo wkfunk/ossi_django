@@ -26,9 +26,16 @@
           <p>{{ variety.crop }}<i> ({{ variety.latin_name }})</p></i>
           <p>Bred by: {{ variety.breeder }}</p>
 
-          <p>Seed availability:</p>
-          <ul>
-          </ul>
+          {% if variety.locations.all %}
+            <p>Seed availability:</p>
+            <ul>
+            {% for location in variety.locations.all %}
+              <li><a href="{{ location.url }}" target="_blank">{{ location.seller }}</a></li>  
+            {% endfor %}
+            </ul>
+          {% else %}
+            <i><p>No availability.</p></i>
+          {% endif %}
 
         </div>
       </div>
