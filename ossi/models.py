@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 import django_filters
+from django_filters import AllValuesFilter,ChoiceFilter,MultipleChoiceFilter,FilterSet,CharFilter
+from django_filters.widgets import LinkWidget
 
 class Member(models.Model):
     first_name = models.CharField(max_length=50)
@@ -60,7 +62,7 @@ class VarietySubmission(models.Model):
     breeding_processes = models.TextField()
     breeding_generations = models.IntegerField()
     breeding_differ = models.TextField()
-    
+
     #stability
     stability = models.CharField(max_length=100)
     submission_IP = models.BooleanField()
@@ -78,12 +80,12 @@ class Seller(models.Model):
     name = models.CharField(max_length=100)
     default_url = models.URLField()
     image = models.FileField()
+    sold = models.ForeignKey('SeedSold')
     def __str__(self):
         return self.name
 
 class SeedSold(models.Model):
-    seller = models.ForeignKey('Seller')
-    variety = models.ForeignKey('Variety')
+    location = models.ForeignKey('Seller')
     url = models.URLField()
     def __str__(self):
         return self.variety + " (" + self.seller + ")"
@@ -128,19 +130,12 @@ class FAQ(models.Model):
     def __str__(self):
         return self.question
 
-class VarietyFilter(django_filters.FilterSet):
-    #unique breeders
-    #breeders = [variety.breeder.name for variety in Variety.objects.all()]
-    #BREEDERS = zip(breeders,breeders)
-    #BREEDERS = zip(range(1,len(breeders)), breeders)
-    #breeder = django_filters.MultipleChoiceFilter(choices = BREEDERS)
+class VarietyFilter(FilterSet):
+    crop = AllValuesFilter('crop',widget=LinkWidget)
+    latin_name = AllValuesFilter('latin_name', widget=LinkWidget)
+    breeder = AllValuesFilter('breeder__name', widget=LinkWidget)
+    name = CharFilter('name', label='Search', lookup_type='icontains')
+
     class Meta:
         model = Variety
-        fields = ['name', 'crop', 'latin_name', 'breeder']
-        fields = {
-                'name': ['icontains'],
-                'crop': ['icontains'],
-                'latin_name': ['icontains'],
-                'breeder': ['exact'],
-                }
-        
+        fields = ['breeder', 'latin_name', 'crop', 'name']

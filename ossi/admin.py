@@ -18,13 +18,16 @@ class BreederAdmin(admin.ModelAdmin):
             AddressInLine,
             ]
 
+class SeedSoldAdmin(admin.ModelAdmin):
+    model = SeedSold
+
     
 admin.site.register(Member)
 admin.site.register(Breeder,BreederAdmin)
 admin.site.register(Variety)
 admin.site.register(VarietySubmission)
 admin.site.register(Seller)
-admin.site.register(SeedSold)
+admin.site.register(SeedSold,SeedSoldAdmin)
 admin.site.register(Phone)
 admin.site.register(Address)
 admin.site.register(FAQ)

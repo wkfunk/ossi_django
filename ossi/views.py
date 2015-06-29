@@ -18,9 +18,7 @@ def resources(request):
     return render(request, 'ossi/resources.html')
 def seeds(request):
     #varieties = get_list_or_404(Variety)
-    varieties = VarietyFilter(request.GET, queryset=Variety.objects.all())
-    for variety in varieties:
-        print variety
+    varieties = VarietyFilter(request.GET)
     return render(request, 'ossi/seeds.html', {'varieties':varieties})
 def partners(request):
     #partners = get_list_or_404(Seller)

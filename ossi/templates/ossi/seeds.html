@@ -5,25 +5,42 @@
 
   <h1>Seeds</h1>
 
-  <form action="" method="get">
-    {{ varieties.form.as_p }}
-    <input type="submit" />
-  </form>
+  <div class="row">
+    <div class="col-sm-4">
+      <form action="" method="get">
+        {{ varieties.form.as_p }}
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="col-sm-8">
 
-  {% if varieties %}
-    {% for variety in varieties %}
+      {% if varieties %}
+      {% for variety in varieties %}
 
-      <h2>{{ variety.name }}</h2>
-      <img src={{ variety.image.url }} width=100px height=auto />
-      <p>Crop: {{ variety.crop }}</p>
-      <p>Latin Name: {{ variety.latin_name }}</p>
-      <p>Breeder: {{ variety.breeder }}</p>
+      <div class="row">
+        <div class="col-xs-4">
+          <img src={{ variety.image.url }} width=100px height=auto />
+        </div>
+        <div class="col-xs-8">
+          <h3>{{ variety.name }}</h3>
+          <p>{{ variety.crop }}<i> ({{ variety.latin_name }})</p></i>
+          <p>Bred by: {{ variety.breeder }}</p>
+
+          <p>Seed availability:</p>
+          <ul>
+          </ul>
+
+        </div>
+      </div>
       <br>
 
-    {% endfor %}
-  {% else %}
-    <p>An error has occurred. Varieties are not available right now.</p>
-  {% endif %}
+      {% endfor %}
+      {% else %}
+      <h2 style="text-align: center" >No varieties selected.</h2>
+      {% endif %}
+
+    </div>
+  </div>
 
 
 
