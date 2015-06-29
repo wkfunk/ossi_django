@@ -80,12 +80,12 @@ class Seller(models.Model):
     name = models.CharField(max_length=100)
     default_url = models.URLField()
     image = models.FileField()
-    sold = models.ForeignKey('SeedSold')
     def __str__(self):
         return self.name
 
 class SeedSold(models.Model):
-    location = models.ForeignKey('Seller')
+    seller = models.ForeignKey('Seller')
+    variety = models.ForeignKey('Variety')
     url = models.URLField()
     def __str__(self):
         return self.variety + " (" + self.seller + ")"

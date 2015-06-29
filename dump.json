@@ -204,7 +204,7 @@
 },
 {
   "fields": {
-    "breeder": 1,
+    "breeder": 2,
     "image": "./beefy_k9Wcbrv.jpg",
     "name": "Beefy Resilient Grex, Bush Dry Bean",
     "crop": "Bean",
@@ -226,7 +226,7 @@
 },
 {
   "fields": {
-    "breeder": 1,
+    "breeder": 3,
     "image": "./hannan_5yergwK.jpg",
     "name": "Hannan Popbean",
     "crop": "Bean",
@@ -1101,5 +1101,31 @@
   },
   "model": "admin.logentry",
   "pk": 24
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-06-29T13:58:03.903Z",
+    "object_repr": "Beefy Resilient Grex, Bush Dry Bean",
+    "object_id": "2",
+    "change_message": "Changed breeder.",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 25
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-06-29T13:58:10.242Z",
+    "object_repr": "Hannan Popbean",
+    "object_id": "4",
+    "change_message": "Changed breeder.",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 26
 }
 ]
