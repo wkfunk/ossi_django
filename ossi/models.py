@@ -31,6 +31,7 @@ class Variety(models.Model):
     latin_name = models.CharField(max_length=50)
     image = models.FileField()
     breeder = models.ForeignKey('Breeder')
+    description = models.TextField(blank=True)
     def __str__(self):
         return self.name
 

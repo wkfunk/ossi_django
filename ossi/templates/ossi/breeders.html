@@ -11,11 +11,13 @@
 
   {% if breeders %}
     {% for breeder in breeders %}
+    <div class="row" style="padding:5px;">
 
-    <img style="float:right;" src={{ breeder.image.url }} width=150px height=autoalt="{{ breeder.name }}" />
-    <h4><strong>{% if breeder.default_url %}<a href="{{ breeder.default_url }}" target="_blank">{% endif %}{{ breeder.name }}{% if breeder.default_url %}</a>{% endif %}, {{ breeder.affiliation }}</strong></h4>
-      <p>{{ breeder.bio }}</p>
-      <br>
+      <img style="float:right;" src={{ breeder.image.url }} width=150px height=autoalt="{{ breeder.name }}" />
+      <h4><strong>{% if breeder.default_url %}<a href="{{ breeder.default_url }}" target="_blank">{% endif %}{{ breeder.name }}{% if breeder.default_url %}</a>{% endif %}, {{ breeder.affiliation }}</strong></h4>
+        <p>{{ breeder.bio }}</p>
+        <br>
+    </div>
 
     {% endfor %}
   {% else %}

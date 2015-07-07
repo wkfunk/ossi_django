@@ -33,9 +33,16 @@
               <li><a href="{{ location.url }}" target="_blank">{{ location.seller }}</a></li>  
             {% endfor %}
             </ul>
+
           {% else %}
             <i><p>No availability.</p></i>
           {% endif %}
+
+          <!-- read more -->
+          <div class = "show_more">
+            {{ variety.description }}
+          </div>
+
 
         </div>
       </div>
