@@ -7,3 +7,13 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
 
+<!-- jquery expander -->
+<script src="{% static "js/jquery.expander.min.js" %}"></script>
+<script type="text/javascript">
+$('div.show_more').expander({
+    slicePoint:0,
+    expandPrefix: '',
+    expandText: 'Show details',
+    userCollapseText: '[^]',
+});
+</script>
