@@ -4,7 +4,8 @@ from django.shortcuts import render,get_object_or_404,get_list_or_404
 from .models import Breeder,Variety,Seller,FAQ,VarietyFilter
 
 def index(request):
-    return render(request, 'ossi/index.html')
+    varieties = Variety.objects.all().order_by('?')[:3]
+    return render(request, 'ossi/index.html', {'varieties':varieties})
 
 def about(request):
     return render(request, 'ossi/about.html')

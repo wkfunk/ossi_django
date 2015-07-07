@@ -11,10 +11,10 @@ https://djangosnippets.org/snippets/2032/
 
 7/3/15:
 -------------
-[ ] add variety description to variety model
-[ ] add "show more" link to display variety description
+[x] add variety description to variety model
+[x] add "show more" link to display variety description
 [x] sort partners/breeders alphabetically
-[ ] pick random sample of 5 varieties for front page (with different crops
+[x] pick random sample of 5 varieties for front page (with different crops
 
 [ ] build forms
 
