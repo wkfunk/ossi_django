@@ -8,12 +8,16 @@
   <h1>Partners</h1>
 
   {% if partners %}
+    <div class="masonry" style="margin:0px 50px;">
     {% for partner in partners %}
 
-    <a href="{{ partner.default_url }}"><img src={{ partner.image.url }} alt="{{ partner.name }}" target="_blank" style="float:left;" /></a>
+    <div class="grid-item" style="margin:5px;">
+      <a href="{{ partner.default_url }}"><img src={{ partner.image.url }} alt="{{ partner.name }}" target="_blank" style="float:left;" /></a>
       <br>
+    </div>
 
     {% endfor %}
+    </div>
   {% else %}
     <p>An error has occurred. Partners are not available right now.<p>
   {% endif %}
