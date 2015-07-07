@@ -9,10 +9,14 @@
 
 <!-- masonry -->
 <script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+
 <script type="text/javascript">
-$('div.masonry').masonry({
-    columnWidth:1,
-    itemSelector:'.grid-item',
+$('div.masonry').imagesLoaded( function() {
+  $('div.masonry').masonry({
+      columnWidth:1,
+      itemSelector:'.grid-item',
+  });
 });
 </script>
 
