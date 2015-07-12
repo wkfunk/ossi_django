@@ -1,7 +1,11 @@
 # Create your views here.
+from django.views.generic.edit import CreateView
 from django.http import HttpResponse
-from django.shortcuts import render,get_object_or_404,get_list_or_404
-from .models import Breeder,Variety,Seller,FAQ,VarietyFilter
+from django.shortcuts import render,get_object_or_404,get_list_or_404,render_to_response
+from .models import Breeder,Variety,Seller,FAQ,VarietyFilter,Member
+from django.forms.models import modelformset_factory
+from ossi.forms import MemberForm
+
 
 def index(request):
     varieties = Variety.objects.all().order_by('?')[:3]
@@ -33,3 +37,16 @@ def breeders(request):
     return render(request, 'ossi/breeders.html', {'breeders':breeders})
 def members(request):
     return render(request, 'ossi/members.html')
+#forms
+def becomecontributor(request):
+    return render(request, 'ossi/members.html')
+def becomepartner(request):
+    return render(request, 'ossi/members.html')
+def becomemember(request):
+    if request.method == 'POST':
+        formset = MemberForm(request.POST)
+        if formset.is_valid():
+            formset.save()
+    else:
+        formset = MemberForm()
+    return render(request, "ossi/becomemember.html", {"formset":formset,})

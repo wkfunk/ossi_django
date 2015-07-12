@@ -4,6 +4,7 @@ from django.contrib.contenttypes import generic
 import django_filters
 from django_filters import AllValuesFilter,ChoiceFilter,MultipleChoiceFilter,FilterSet,CharFilter
 from django_filters.widgets import LinkWidget
+from django.forms import ModelForm
 
 class Member(models.Model):
     first_name = models.CharField(max_length=50)
@@ -140,3 +141,8 @@ class VarietyFilter(FilterSet):
     class Meta:
         model = Variety
         fields = ['breeder', 'latin_name', 'crop', 'name']
+
+#class MemberForm(ModelForm):
+    #class Meta:
+        #model = Member
+        #exclude = []

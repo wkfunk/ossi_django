@@ -22,6 +22,14 @@
             <li><a href="{% url 'breeders' %}">Plant Breeders</a></li>
             <li><a href="{% url 'partners' %}">Seed Company Partners</a></li>
             <li><a href="{% url 'resources' %}">Resources</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Involved <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'becomecontributor' %}">Contribute a variety</a></li>
+              <li><a href="{% url 'becomepartner' %}">Sell OSSI seed</a></li>
+              <li><a href="{% url 'becomemember' %}">Become a member</a></li>
+            </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

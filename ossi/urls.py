@@ -1,5 +1,4 @@
 from django.conf.urls import url
-
 from . import views
 
 urlpatterns = [
@@ -13,5 +12,9 @@ urlpatterns = [
     url(r'^team', views.team, name='team'),
     url(r'^breeders', views.breeders, name='breeders'),
     url(r'^members', views.members, name='members'),
+    url(r'^becomecontributor', views.becomecontributor, name='becomecontributor'),
+    url(r'^becomepartner', views.becomepartner, name='becomepartner'),
+    url(r'^becomemember', views.becomemember, name='becomemember'),
+
     ]
 
