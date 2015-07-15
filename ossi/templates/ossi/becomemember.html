@@ -2,9 +2,11 @@
 {% block title %}OSSI - Index{% endblock %}
 {% block content %}
 
+<h1>Become a member:</h1>
+
 <form method="post" action="">
   {% csrf_token %}
-  {{ formset.as_p }}
+  <table> {{ formset.as_table }} </table>
   <input type="submit" value="Submit"/>
 </form>
 
