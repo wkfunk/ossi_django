@@ -1,13 +1,28 @@
 {% extends "ossi/base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}OSSI - Index{% endblock %}
+{% block extrahead %}{{ formset.media }}{% endblock %}
 {% block content %}
 
-<h1>Become a member:</h1>
 
-<form method="post" action="">
-  {% csrf_token %}
-  <table> {{ formset.as_table }} </table>
-  <input type="submit" value="Submit"/>
-</form>
+{% if success %}
+  <h2>Thanks for registering!</h2>
+{% else %}
+  <h1>Become a member!</h1>
 
+  <p>Membership is open to anyone. You can become an OSSI Member by declaring your support for OSSI’s objectives and activities. As an OSSI Member, you will be added to our mailing list and periodically will receive updates about our work.</p>
+
+  <blockquote>&quot;I support the OSSI Pledge and the maintenance of fair and open access to plant genetic resources  worldwide.&quot;</blockquote>
+
+  <div class="row">
+    <div class="col-md-6">
+      <form method="post" action="">
+        {% csrf_token %}
+        <table> {{ formset|crispy }} </table>
+        <input id="submit" type="submit" value="Submit"/>
+      </form>
+    </div>
+    <div class="map_canvas col-md-6"></div>
+  </div>
+{% endif %}
 {% endblock %}

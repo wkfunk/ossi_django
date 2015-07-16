@@ -5,11 +5,13 @@ import django_filters
 from django_filters import AllValuesFilter,ChoiceFilter,MultipleChoiceFilter,FilterSet,CharFilter
 from django_filters.widgets import LinkWidget
 from django.forms import ModelForm
+from address.models import AddressField
 
 class Member(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     #address = models.ForeignKey('Address')
+    address = AddressField(null=True)
     email = models.EmailField()
     def __str__(self):
         return ' '.join([self.first_name, self.last_name])

@@ -4,6 +4,9 @@
 {% include "ossi/includes/head_meta.html" %}
 <title>{% block title %}OSSI{% endblock %}</title>
 {% include "ossi/includes/head_js_css.html" %}
+{% include "ossi/includes/footer_js.html" %}
+{% block extrahead %}
+{% endblock extrahead %}
 </head>
 
 <body>
@@ -20,7 +23,6 @@
 
 </div> <!-- /container -->
 
-{% include "ossi/includes/footer_js.html" %}
 
 </body>
 </html>

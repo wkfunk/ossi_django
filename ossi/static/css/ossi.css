@@ -79,3 +79,7 @@ div.partners{
 a.selected{
   font-weight:bold;
 }
+
+.map_canvas { 
+  height: 400px; 
+}

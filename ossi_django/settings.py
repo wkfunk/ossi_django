@@ -125,6 +125,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'ossi',
     'django_filters',
+    'address',
+    'crispy_forms',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -155,3 +157,5 @@ LOGGING = {
         },
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

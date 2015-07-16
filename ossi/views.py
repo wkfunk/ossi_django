@@ -1,6 +1,6 @@
 # Create your views here.
 from django.views.generic.edit import CreateView
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,get_object_or_404,get_list_or_404,render_to_response
 from .models import Breeder,Variety,Seller,FAQ,VarietyFilter,Member
 from django.forms.models import modelformset_factory
@@ -47,6 +47,7 @@ def becomemember(request):
         formset = MemberForm(request.POST)
         if formset.is_valid():
             formset.save()
+            return render(request, 'ossi/becomemember.html', {'success':True})
     else:
         formset = MemberForm()
     return render(request, "ossi/becomemember.html", {"formset":formset,})
