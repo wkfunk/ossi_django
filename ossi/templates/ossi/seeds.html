@@ -5,6 +5,7 @@
 
   <h1>Seeds</h1>
 
+{% if varieties %}
   <div class="row">
     <div class="col-sm-4">
       <form action="" method="get">
@@ -14,7 +15,7 @@
     </div>
     <div class="col-sm-8">
 
-      {% if varieties %}
+    {% if varieties %}
       {% for variety in varieties %}
 
       <div class="row">
@@ -23,7 +24,7 @@
         </div>
         <div class="col-xs-8">
           <h3>{{ variety.name }}</h3>
-          <p>{{ variety.crop }}<i> ({{ variety.latin_name }})</p></i>
+          <p>{{ variety.crop_common_name }}<i> ({{ variety.crop_latin_name }})</p></i>
           <p>Bred by: {{ variety.breeder }}</p>
 
           {% if variety.locations.all %}
@@ -55,6 +56,10 @@
 
     </div>
   </div>
+  {% else %}
+    <p>An error occurred. Seeds are not available right now.</p>
+
+{% endif %}
 
 
 

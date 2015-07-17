@@ -1,0 +1,21 @@
+{% extends "ossi/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}OSSI - Index{% endblock %}
+{% block extrahead %}{{ formset.media }}{% endblock %}
+{% block content %}
+
+
+{% if success %}
+  <h2>Thanks for contributing a variety!</h2>
+{% else %}
+  <h1>Submit a variety!</h1>
+
+  <p>This is the application to designate a variety as Open Source under the Open Source Seed Initiative. OSSI representatives will review and respond to your application. To be eligible for OSSI, the variety must be unique and include selection from a heterogenous (variable) population, or be a breeding population. You must have the ability to designate the variety as open source.</p>
+
+      <form enctype="multipart/form-data" method="post" action="">
+        {% csrf_token %}
+        {{ formset|crispy }}
+        <input id="submit" type="submit" value="Submit"/>
+      </form>
+{% endif %}
+{% endblock %}

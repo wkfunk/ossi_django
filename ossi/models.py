@@ -28,57 +28,65 @@ class Breeder(models.Model):
     def __str__(self):
         return self.name + " (" + self.affiliation + ")"
 
+
+class ApprovedVarietyManager(models.Manager):
+    def get_queryset(self):
+        return super(ApprovedVarietyManager, self).get_queryset().filter(active=True)
+
 class Variety(models.Model):
+    #MODERATED
+    #----------------------------
     name = models.CharField(max_length=50)
-    crop = models.CharField(max_length=50)
-    latin_name = models.CharField(max_length=50)
-    image = models.FileField()
-    breeder = models.ForeignKey('Breeder')
-    description = models.TextField(blank=True)
+    crop_common_name = models.CharField(max_length=100)
+    crop_latin_name = models.CharField(max_length=50)
+    image = models.FileField(null=True)
+    breeder = models.ForeignKey('Breeder',null=True)
+    active = models.BooleanField(default=False)
+    description = models.TextField()
+
+    #SUBMISSIONS
+    #----------------------------
+    #variety contributor
+    breeder_name = models.CharField(max_length=100, blank=True)
+    breeder_affiliation = models.CharField(max_length=100, blank=True)
+    breeder_address = AddressField(null=True, blank=True)
+    breeder_email = models.EmailField(blank=True)
+
+    #variety information
+    sold_commercially = models.BooleanField(blank=True)
+    where_sold_commercially = models.TextField(blank=True)
+
+    #origin
+    origin_population = models.TextField(blank=True)
+    origin_parents = models.TextField(blank=True)
+    origin_characteristics = models.TextField(blank=True)
+    origin_two_or_more = models.BooleanField(blank=True)
+    origin_selection_stabilization = models.BooleanField(blank=True)
+    origin_single_parent = models.BooleanField(blank=True)
+    breeding_crosses = models.TextField(blank=True)
+    breeding_goals = models.TextField(blank=True)
+    breeding_processes = models.TextField( blank=True)
+    breeding_generations = models.IntegerField(null=True, blank=True)
+    breeding_differ = models.TextField(blank=True)
+
+    #stability
+    stability = models.CharField(max_length=100, blank=True)
+    submission_IP = models.BooleanField(blank=True)
+    submission_IP_details = models.TextField(blank=True)
+    submission_sole_breeder = models.BooleanField(blank=True)
+    submission_sole_breeder_details = models.TextField(blank=True)
+    submission_permission = models.BooleanField(blank=True)
+    submission_permission_details = models.TextField(blank=True)
+    submission_signature = models.CharField(max_length=100, blank=True)
+
     def __str__(self):
         return self.name
 
-class VarietySubmission(models.Model):
-    #variety contributor
-    breeder = models.CharField(max_length=100)
-    breeder_affiliation = models.CharField(max_length=100)
-    #breeder_address = models.ForeignKey('Address')
-    breeder_email = models.EmailField()
-    #breeder_phone = models.CharField(max_length=50)
+class ApprovedVariety(Variety):
+    objects = ApprovedVarietyManager()
+    class Meta:
+        proxy = True
 
-    #variety information
-    crop_common_name = models.CharField(max_length=100)
-    crop_latin_name = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    image = models.CharField(max_length=50)
-    sold_commercially = models.BooleanField()
-    where_sold_commercially = models.TextField()
-
-    #origin
-    origin_population = models.TextField()
-    origin_parents = models.TextField()
-    origin_characteristics = models.TextField()
-    origin_two_or_more = models.BooleanField()
-    origin_selection_stabilization = models.BooleanField()
-    origin_single_parent = models.BooleanField()
-    breeding_crosses = models.TextField()
-    breeding_goals = models.TextField()
-    breeding_processes = models.TextField()
-    breeding_generations = models.IntegerField()
-    breeding_differ = models.TextField()
-
-    #stability
-    stability = models.CharField(max_length=100)
-    submission_IP = models.BooleanField()
-    submission_IP_details = models.TextField()
-    submission_sole_breeder = models.BooleanField()
-    submission_sole_breeder_details = models.TextField()
-    submission_permission = models.BooleanField()
-    submission_permission_details = models.TextField()
-    submission_signature = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name + " (" + self.breeder + ")"
 
 class Seller(models.Model):
     name = models.CharField(max_length=100)
@@ -93,26 +101,6 @@ class SeedSold(models.Model):
     url = models.URLField()
     def __str__(self):
         return str(self.seller) + " (" + self.url + ")"
-
-
-#ADDRESSES
-class Address(models.Model):
-    address_1 = models.CharField(max_length=100)
-    address_2 = models.CharField(max_length=100,null=True,blank=True)
-    city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
-    zip_code = models.CharField(max_length=10)
-    country = models.CharField(max_length=100)
-
-    #reverse inline stuff
-    # http://stackoverflow.com/questions/8597960/reverse-inlines-in-django-admin-with-more-than-one-model
-    object_id = models.PositiveIntegerField()
-    content_type = models.ForeignKey(ContentType)
-    of = generic.GenericForeignKey('content_type', 'object_id')
-
-    def __str__(self):
-        return ', '.join([self.address_1, self.city, self.state])
-
 
 #PHONES
 class Phone(models.Model):
@@ -134,17 +122,13 @@ class FAQ(models.Model):
     def __str__(self):
         return self.question
 
+
 class VarietyFilter(FilterSet):
-    crop = AllValuesFilter('crop',widget=LinkWidget)
-    latin_name = AllValuesFilter('latin_name', widget=LinkWidget)
+    crop_common_name = AllValuesFilter('crop_common_name',widget=LinkWidget)
+    crop_latin_name = AllValuesFilter('crop_latin_name', widget=LinkWidget)
     breeder = AllValuesFilter('breeder__name', widget=LinkWidget)
     name = CharFilter('name', label='Search', lookup_type='icontains')
 
     class Meta:
-        model = Variety
-        fields = ['breeder', 'latin_name', 'crop', 'name']
-
-#class MemberForm(ModelForm):
-    #class Meta:
-        #model = Member
-        #exclude = []
+        model = ApprovedVariety
+        fields = ['breeder', 'crop_latin_name', 'crop_common_name', 'name']

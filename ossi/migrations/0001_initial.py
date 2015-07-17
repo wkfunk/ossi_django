@@ -2,29 +2,17 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
+import address.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
         ('contenttypes', '0002_remove_content_type_name'),
+        ('address', '__first__'),
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Address',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('address_1', models.CharField(max_length=100)),
-                ('address_2', models.CharField(max_length=100, null=True, blank=True)),
-                ('city', models.CharField(max_length=100)),
-                ('state', models.CharField(max_length=100)),
-                ('zip_code', models.CharField(max_length=10)),
-                ('country', models.CharField(max_length=100)),
-                ('object_id', models.PositiveIntegerField()),
-                ('content_type', models.ForeignKey(to='contenttypes.ContentType')),
-            ],
-        ),
         migrations.CreateModel(
             name='Breeder',
             fields=[
@@ -52,6 +40,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=50)),
                 ('last_name', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
+                ('address', address.models.AddressField(to='address.Address', null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -83,51 +72,48 @@ class Migration(migrations.Migration):
             name='Variety',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=50)),
-                ('crop', models.CharField(max_length=50)),
-                ('latin_name', models.CharField(max_length=50)),
-                ('image', models.FileField(upload_to=b'')),
-                ('breeder', models.ForeignKey(to='ossi.Breeder')),
-                ('sold', models.ForeignKey(to='ossi.SeedSold')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='VarietySubmission',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('breeder', models.CharField(max_length=100)),
-                ('breeder_affiliation', models.CharField(max_length=100)),
-                ('breeder_email', models.EmailField(max_length=254)),
-                ('crop_common_name', models.CharField(max_length=100)),
-                ('crop_latin_name', models.CharField(max_length=50)),
-                ('name', models.CharField(max_length=50)),
-                ('image', models.CharField(max_length=50)),
+                ('breeder_name', models.CharField(max_length=100, blank=True)),
+                ('breeder_affiliation', models.CharField(max_length=100, blank=True)),
+                ('breeder_email', models.EmailField(max_length=254, blank=True)),
+                ('crop_common_name', models.CharField(max_length=100, blank=True)),
+                ('crop_latin_name', models.CharField(max_length=50, blank=True)),
+                ('name', models.CharField(max_length=50, blank=True)),
+                ('image', models.FileField(upload_to=b'', blank=True)),
                 ('sold_commercially', models.BooleanField()),
-                ('where_sold_commercially', models.TextField()),
-                ('origin_population', models.TextField()),
-                ('origin_parents', models.TextField()),
-                ('origin_characteristics', models.TextField()),
+                ('where_sold_commercially', models.TextField(blank=True)),
+                ('description', models.TextField(blank=True)),
+                ('origin_population', models.TextField(blank=True)),
+                ('origin_parents', models.TextField(blank=True)),
+                ('origin_characteristics', models.TextField(blank=True)),
                 ('origin_two_or_more', models.BooleanField()),
                 ('origin_selection_stabilization', models.BooleanField()),
                 ('origin_single_parent', models.BooleanField()),
-                ('breeding_crosses', models.TextField()),
-                ('breeding_goals', models.TextField()),
-                ('breeding_processes', models.TextField()),
-                ('breeding_generations', models.IntegerField()),
-                ('breeding_differ', models.TextField()),
-                ('stability', models.CharField(max_length=100)),
+                ('breeding_crosses', models.TextField(blank=True)),
+                ('breeding_goals', models.TextField(blank=True)),
+                ('breeding_processes', models.TextField(blank=True)),
+                ('breeding_generations', models.IntegerField(blank=True)),
+                ('breeding_differ', models.TextField(blank=True)),
+                ('stability', models.CharField(max_length=100, blank=True)),
                 ('submission_IP', models.BooleanField()),
-                ('submission_IP_details', models.TextField()),
+                ('submission_IP_details', models.TextField(blank=True)),
                 ('submission_sole_breeder', models.BooleanField()),
-                ('submission_sole_breeder_details', models.TextField()),
+                ('submission_sole_breeder_details', models.TextField(blank=True)),
                 ('submission_permission', models.BooleanField()),
-                ('submission_permission_details', models.TextField()),
-                ('submission_signature', models.CharField(max_length=100)),
+                ('submission_permission_details', models.TextField(blank=True)),
+                ('submission_signature', models.CharField(max_length=100, blank=True)),
+                ('active', models.BooleanField()),
+                ('breeder', models.ForeignKey(blank=True, to='ossi.Breeder', null=True)),
+                ('breeder_address', address.models.AddressField(blank=True, to='address.Address', null=True)),
             ],
         ),
         migrations.AddField(
             model_name='seedsold',
             name='seller',
             field=models.ForeignKey(to='ossi.Seller'),
+        ),
+        migrations.AddField(
+            model_name='seedsold',
+            name='variety',
+            field=models.ForeignKey(related_name='locations', blank=True, to='ossi.Variety', null=True),
         ),
     ]
