@@ -48,7 +48,7 @@ def becomecontributor(request):
         formset = VarietyForm()
     return render(request, "ossi/becomecontributor.html", {"formset":formset,})
 def becomepartner(request):
-    return render(request, 'ossi/members.html')
+    return render(request, 'ossi/becomepartner.html')
 def becomemember(request):
     if request.method == 'POST':
         formset = MemberForm(request.POST)
