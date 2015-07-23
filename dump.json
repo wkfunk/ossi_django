@@ -1,30 +1,6 @@
 [
 {
   "fields": {
-    "bio": "Oregon plant breeder Carol Deppe holds a PhD in biology from Harvard University and specializes in developing public-domain crops for organic growing conditions, sustainable agriculture, and human survival for the next thousand years. She is author of Breed Your Own Vegetable Varieties: The Gardener\u2019s and Farmer\u2019s Guide to Plant Breeding and Seed Saving (2 nd ed.) (Chelsea Green, 2000), The Resilient Gardener: Food Production and Self-Reliance in Uncertain Times (Including the Five Crops You Need To Survive and Thrive\u2014Potatoes, Corn, Beans, Squash, and Eggs) (Chelsea Green, 2010), and The Tao of Vegetable Gardening: Cultivating Tomatoes, Greens, Peas, Beans, Squash, Joy, and Serenity (Chelsea Green, Jan. 2015). Carol is founder and owner of Fertile Valley Seeds, which distributes the varieties she has bred along with selected others. For seed variety descriptions and ordering information see the Fertile Valley Seeds seed list at www.caroldeppe.com . Varieties Carol has bred and released include: Flint Corns: \u2018Cascade Ruby-Gold\u2019 and \u2018Cascade Creamcap\u2019; Flour Corns: \u2018Magic Manna\u2019, \u2018Pancake White Manna\u2019, and \u2018Brown Gravy Manna\u2019; Winter Squash: \u2018Sweet Meat\u2014Oregon Homestead\u2019 and \u2018Candystick Dessert Delicata\u2019; and Dry Beans: \u2018White Candle Gaucho\u2019, \u2018Beefy Resilient Grex\u2019, \u2018Hannan Popbean\u2019 (garbanzo), and \u2018Fast Lady Northern Southern Pea\u2019 (cowpea). \u2018Cascade Ruby-Gold\u2019 and \u2018Cascade Creamcap\u2019 flint corns have extended the range northward for corn as a practical homestead crop and produce reliable on Vancouver Island, British Columbia, in Ireland, and in Sweden. For photos of some of these varieties see https://www.flickr.com/photos/caroldeppe/sets/ .",
-    "name": "Carol Deppe",
-    "image": "./CarolwithSquash_muI5UzH.jpg",
-    "affiliation": "Fertile Valley Seeds",
-    "default_url": "http://www.caroldeppe.com",
-    "email": "carol@carol.com"
-  },
-  "model": "ossi.breeder",
-  "pk": 1
-},
-{
-  "fields": {
-    "bio": "Irwin Goldman is a professor in the Department of Horticulture at the University of Wisconsin-Madison. His research focuses on vegetable breeding and genetics (carrot, onion, and table beet) with an emphasis on plant secondary metabolites that have some potential value for human health and wellbeing. He has also bred numerous cultivars and inbred lines that have been used to make commercial hybrids. These are grown by farmers throughout the world. A portion of the germplasm from his program is licensed through WARF and returns royalties to the breeding program. His program currently has over 75 active germplasm licenses. Irwin teaches five courses at UW-Madison, including world vegetable crops, principles of plant breeding, techniques of plant breeding, evolutionary biology, and plants and human well being. He is currently serving as department chair and works with both graduate and undergraduate students in a variety of research and outreach projects.",
-    "name": "Irwin Goldman",
-    "image": "./irwin_qre45CN.jpg",
-    "affiliation": "UW-Madison",
-    "default_url": "http://goldman.horticulture.wisc.edu/",
-    "email": "irwin@uw.edu"
-  },
-  "model": "ossi.breeder",
-  "pk": 2
-},
-{
-  "fields": {
     "bio": "Dr. Patrick Hayes is a Professor at Oregon State University. His research focuses on barley \u2013 in its many forms and uses. His current research interests include: development of winter habit barley varieties for malting and human nutrition; the many facets of winter hardiness; dissection of quantitative disease resistance; characterization and utilization of genetic diversity; stimulating local barley production; and barley quality assessment. He has generated a fair bit of \u201cstuff\u201d over the years: he has released nine varieties, distributed approximately 11 MT of germplasm, published 132 papers in refereed journals, and authored 12 book chapters. Each year he teaches Introductory Plant Genetics to approximately 50 students. Most of them start the class with fear and loathing but most graduate with a keen appreciation for the complexity and power of genetics. He has served as Major Professor for 28 graduate students and five undergraduate thesis students.",
     "name": "Pat Hayes",
     "image": "./pat_9cH60PT.jpg",
