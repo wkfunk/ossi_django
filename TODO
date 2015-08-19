@@ -7,6 +7,8 @@
 [ ] variety submission email trigger
 [ ] variety confirmation
       "Thanks for contributing a variety. A member of the OSSI review committee will get back to you shortly."
+[ ] s3 migration
+  [ ] "AWS_S3_FILE_OVERWRITE (default True) used to specify if files are overwritten or not on update. The mechanism is used by the method that retrieves a name; if overwrite is enabled, the file name is the same as the original. Otherwise, a new name is retrieved from S3Boto"
 
 
 #inline address/phone for e.g. breeder and company
