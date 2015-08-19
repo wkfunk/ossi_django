@@ -1,6 +1,7 @@
-
 {% extends "ossi/base.html" %}
+{% load staticfiles %}
 {% block title %}OSSI - Index{% endblock %}
+
 {% block content %}
 
   <h1>Seeds</h1>
@@ -60,8 +61,23 @@
     <p>An error occurred. Seeds are not available right now.</p>
 
 {% endif %}
-
-
-
 {% endblock %}
 
+{% block extrafoot %}
+<script src="{% static "js/jquery.expander.min.js" %}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('div.show_more').expander({
+      slicePoint:100,
+      preserveWords: true,
+      expandEffect: 'fadeIn',
+      expandSpeed: 0,
+      collapseEffect: 'fadeOut',
+      collapseSpeed: 0,
+      expandPrefix: ' ',
+      expandText: '(Read More)',
+      userCollapseText: 'Close',
+  });
+});
+</script>
+{% endblock %}

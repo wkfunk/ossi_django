@@ -1,3 +1,14 @@
+8/19/15:
+---------------
+[ ] add "show more" link to display variety description
+[ ] keith to add self to people page
+[ ] email confirmation for membership signup
+[ ] separate submitted varieties on variety admin page
+[ ] variety submission email trigger
+[ ] variety confirmation
+      "Thanks for contributing a variety. A member of the OSSI review committee will get back to you shortly."
+
+
 #inline address/phone for e.g. breeder and company
 https://djangosnippets.org/snippets/2032/
 
@@ -10,7 +21,7 @@ agenda:
 todo:
   [ ] keith to add self to people page
   [ ] email confirmation for membership signup
-  [ ] get test version of website online
+  [x] get test version of website online
 
 
 7/7/15:

@@ -1,5 +1,6 @@
 
 {% extends "ossi/base.html" %}
+{% load staticfiles %}
 {% block title %}OSSI - Index{% endblock %}
 {% block content %}
 
@@ -25,5 +26,23 @@
   <p style="clear: both;">
 
 
+
+{% endblock %}
+
+
+{% block extrafoot %}
+
+<!-- masonry -->
+<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+
+<script type="text/javascript">
+$('div.masonry').imagesLoaded( function() {
+  $('div.masonry').masonry({
+      columnWidth:1,
+      itemSelector:'.grid-item',
+  });
+});
+</script>
 
 {% endblock %}
