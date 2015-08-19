@@ -206,3 +206,6 @@ STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'ossi_django.custom_storages.MediaStorage'
+
+# http://stackoverflow.com/questions/10323241/django-storages-with-amazon-s3-prevent-overwriting
+AWS_S3_FILE_OVERWRITE = False
