@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Member,Breeder,Variety,Seller,SeedSold,Phone,FAQ
+from .models import Member,Breeder,Variety,Seller,SeedSold,Phone,FAQ,ApprovedVariety,UnapprovedVariety
 from django.contrib.contenttypes import generic
 
 
@@ -37,8 +37,17 @@ class SeedSoldInline(admin.TabularInline):
 class BreederAdmin(admin.ModelAdmin):
     model = Breeder
 
-class VarietyAdmin(admin.ModelAdmin):
-    model = Variety
+class ApprovedVarietyAdmin(admin.ModelAdmin):
+    model = ApprovedVariety
+    inlines = [
+            SeedSoldInline,
+            ]
+    fieldsets = hide_fields(
+            ('Publicly visible fields', {'fields': ['name', 'crop_common_name', 'crop_latin_name', 'image', 'breeder', 'description', 'active']})
+)
+
+class UnapprovedVarietyAdmin(admin.ModelAdmin):
+    model = UnapprovedVariety
     inlines = [
             SeedSoldInline,
             ]
@@ -49,7 +58,8 @@ class VarietyAdmin(admin.ModelAdmin):
 
 admin.site.register(Member)
 admin.site.register(Breeder,BreederAdmin)
-admin.site.register(Variety, VarietyAdmin)
+admin.site.register(ApprovedVariety, ApprovedVarietyAdmin)
+admin.site.register(UnapprovedVariety, UnapprovedVarietyAdmin)
 admin.site.register(Seller)
 admin.site.register(SeedSold)
 admin.site.register(Phone)

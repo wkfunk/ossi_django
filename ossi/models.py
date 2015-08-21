@@ -28,6 +28,9 @@ class Breeder(models.Model):
     def __str__(self):
         return self.name + " (" + self.affiliation + ")"
 
+class UnapprovedVarietyManager(models.Manager):
+    def get_queryset(self):
+        return super(UnapprovedVarietyManager, self).get_queryset().filter(active=False)
 
 class ApprovedVarietyManager(models.Manager):
     def get_queryset(self):
@@ -87,6 +90,10 @@ class ApprovedVariety(Variety):
     class Meta:
         proxy = True
 
+class UnapprovedVariety(Variety):
+    objects = UnapprovedVarietyManager()
+    class Meta:
+        proxy = True
 
 class Seller(models.Model):
     name = models.CharField(max_length=100)
