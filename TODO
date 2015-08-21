@@ -1,7 +1,6 @@
 8/19/15:
 ---------------
-[ ] add "show more" link to display variety description
-[ ] keith to add self to people page
+[x] add "show more" link to display variety description
 [ ] email confirmation for membership signup
 [ ] separate submitted varieties on variety admin page
 [ ] variety submission email trigger
@@ -9,6 +8,7 @@
       "Thanks for contributing a variety. A member of the OSSI review committee will get back to you shortly."
 [ ] s3 migration
   [ ] "AWS_S3_FILE_OVERWRITE (default True) used to specify if files are overwritten or not on update. The mechanism is used by the method that retrieves a name; if overwrite is enabled, the file name is the same as the original. Otherwise, a new name is retrieved from S3Boto"
+[ ] blog integration? https://github.com/nephila/djangocms-blog
 
 
 #inline address/phone for e.g. breeder and company
