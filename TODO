@@ -9,6 +9,7 @@
 [ ] s3 migration
   [ ] "AWS_S3_FILE_OVERWRITE (default True) used to specify if files are overwritten or not on update. The mechanism is used by the method that retrieves a name; if overwrite is enabled, the file name is the same as the original. Otherwise, a new name is retrieved from S3Boto"
 [ ] blog integration? https://github.com/nephila/djangocms-blog
+[ ] http://stackoverflow.com/questions/6593348/how-can-i-send-an-email-to-user-on-new-user-addition-to-django-admin-site
 
 
 #inline address/phone for e.g. breeder and company
